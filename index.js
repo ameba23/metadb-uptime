@@ -15,7 +15,7 @@ class Hub {
 
     this.connections = {}
 
-    this.feeds = multifeed(hypercore, this.storagePath, {})
+    this.core = multifeed(hypercore, this.storagePath, {})
   }
 
   swarm (key, cb) { return Swarm(this)(key, cb) }
